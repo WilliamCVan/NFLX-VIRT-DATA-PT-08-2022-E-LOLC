@@ -1,0 +1,34 @@
+-- Determine the relations
+-- replace /relationship/ with the type of relationship to corresponding table
+
+gym
+-
+gym_id INTEGER PK
+gym_name VARCHAR
+address VARCHAR
+city VARCHAR
+zipcode VARCHAR
+
+trainers
+-
+trainer_id INTEGER PK
+gym_id INTEGER FK /relationship/ gym.gym_id
+first_name VARCHAR
+last_name VARCHAR
+
+members
+-
+member_id INTEGER PK
+gym_id INTEGER FK /relationship/ gym.gym_id
+trainer_id INTEGER FK /relationship/ trainers.trainer_id
+first_Name VARCHAR
+last_Name VARCHAR
+address VARCHAR
+city VARCHAR
+
+payments
+-
+payment_id INTEGER PK
+member_id INTEGER FK /relationship/ members.member_id
+creditcard_info INTEGER
+billing_zip INTEGER

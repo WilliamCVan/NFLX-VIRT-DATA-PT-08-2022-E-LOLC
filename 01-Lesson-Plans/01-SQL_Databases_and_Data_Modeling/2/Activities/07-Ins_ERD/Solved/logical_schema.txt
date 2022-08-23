@@ -1,0 +1,56 @@
+# Logical
+
+employee
+-
+employee_id PK
+name
+age
+address
+zipcode FK - zipcode.zip_code
+
+zipcode
+-
+zip_code PK
+city
+state
+
+employee_email
+-
+email_id PK
+employee_id FK - employee.employee_id
+email
+
+owners
+-
+owner_id PK
+first_name
+last_name
+
+estates
+-
+estate_id PK
+owner_id FK - owners.owner_id
+estate_type FK - estate_type.estate_type_id
+address
+zip_code FK - zipcode.zip_code
+
+estate_type
+-
+estate_type_id PK
+estate_type
+
+agents
+-
+agent_id PK,
+first_name
+last_name
+
+regions
+-
+region_id PK
+region_name
+
+agent_region_junction
+-
+agent_id FK - agents.agent_id
+region_id FK - regions.region_id

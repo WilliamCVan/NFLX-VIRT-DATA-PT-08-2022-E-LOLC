@@ -1,0 +1,56 @@
+# Physical
+
+employee
+-
+employee_id INT PK
+name VARCHAR(255)
+age INT
+address VARCHAR(255)
+zip_code INT FK - zipcode.zip_code
+
+zipcode
+-
+zip_code INT PK
+city VARCHAR(255)
+state VARCHAR(255)
+
+employee_email
+-
+email_id INT PK
+employee_id INT FK >- employee.employee_id
+email VARCHAR(255)
+
+owners
+-
+owner_id INT PK
+first_name VARCHAR(255)
+last_name VARCHAR(255)
+
+estates
+-
+estate_id INT PK
+owner_id INT FK - owners.owner_id
+estate_type VARCHAR(255) FK - estate_Type.estate_type_id
+address VARCHAR(255)
+zip_code INT FK - zipcode.zip_code
+
+estate_type
+-
+estate_type_id VARCHAR(255) PK
+estate_type VARCHAR(255)
+
+agents
+-
+agent_id INT PK
+first_name VARCHAR(255)
+last_name VARCHAR(255)
+
+regions
+-
+region_id INT PK
+region_name VARCHAR(255)
+
+agent_region_junction
+-
+agent_id INT FK >- agents.agent_id
+region_id INT FK >- regions.region_id

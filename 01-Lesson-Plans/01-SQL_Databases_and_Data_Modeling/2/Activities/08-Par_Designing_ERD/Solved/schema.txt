@@ -1,0 +1,27 @@
+gym
+-
+id INTEGER PK
+gym_name VARCHAR
+address VARCHAR
+city VARCHAR
+zipcode VARCHAR
+
+trainers
+-
+id INTEGER PK
+first_name VARCHAR
+last_name VARCHAR
+
+members
+-
+id INTEGER PK
+first_name VARCHAR
+last_name VARCHAR
+address VARCHAR
+city VARCHAR
+
+payments
+-
+id INTEGER PK
+creditcard_info INTEGER
+billing_Zzp INTEGER

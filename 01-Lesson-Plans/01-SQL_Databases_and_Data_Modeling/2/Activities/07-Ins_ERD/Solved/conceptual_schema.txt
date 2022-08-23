@@ -1,0 +1,64 @@
+# Conceptual (without relationships)
+
+employee
+-
+
+zipcode
+-
+
+employee_email
+-
+
+owners
+-
+
+estates
+-
+
+estate_type
+-
+
+agents
+-
+
+regions
+-
+
+agent_region_junction
+-
+
+# Conceptual (with relationships)
+
+employee
+rel zipcode
+-
+
+zipcode
+-
+
+employee_email
+rel employee
+-
+
+owners
+-
+
+estates
+rel owners
+rel estate_type
+rel zipcode
+-
+
+estate_type
+-
+
+agents
+-
+
+regions
+-
+
+agent_region_junction
+rel agents
+rel regions
+-
